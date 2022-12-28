@@ -73,14 +73,14 @@ img{
   display: block;
 }
 
-header .link.current-page{
+/* header .link.current-page{
   position:relative;
   display: inline-block;
   
   color: var(--accent);
-}
+} */
 
-.current-page::after{
+/* .current-page::after{
   content:" ";
  position: absolute;
 
@@ -91,7 +91,7 @@ top: calc(24px + 24px - 4px);
 
 background-color: var(--accent);
 border-radius: 2px;
-}
+} */
 /* ==================================================/GENERAL======================================== */
 
 /* вторичный цвет фона #F4F4FD */
@@ -106,23 +106,112 @@ border-radius: 2px;
 
 /* =================================================CONTAINER=============================================*/
 .container{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+
+  background-color: aqua;
+}
+
+@media screen and (min-width: 480px){
+  .container{
+    width: 426px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:768px){
+  .container{
+    width:766px;
+  }
+}
+
+@media screen and (min-width:1200px){
+  .container {
+    width: 1158px;
+}
+}
+
+/* .container{
 width: 1158px;
 margin: 0 auto;
 padding: 0 15px;
-/* background-color: green; */
-}
+} */
 
  /*=================================================/CONTAINER=========================================== */
 
  /* ================================================SECTION============================================= */
-.section{
+/* .section{
   padding-top:120px;
   padding-bottom:120px;
-}
+} */
  /* ================================================/SECTION============================================= */
 
  /* =================================================HEADER================================================= */
+ @media screen and (max-width:767px){
+.site-nav {
+    display: none;
+  }
+
+  .site-address {
+    display: none;
+  }
+ }
+
+ .container-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ 
  .header{
+  padding-top: 24px;
+  padding-bottom: 24px;
+ }
+ 
+ .mobile-menu-burger{
+  background-color: transparent;
+  border:none;
+  fill: var(--title-text-color);
+  padding: 0px;
+  line-height: 0px;
+ }
+
+ .mobile-menu{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: var(--primary-background-color);
+ }
+/* -------------------hrhrhrhrhrhrhhrhrhr---------- */
+ .mobile-menu-cross{
+  position:absolute;
+  display: flex;
+  width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+      background: var(--button-filter-color);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: none;
+      transition: color var(--main-transition), background-color var(--main-transition);
+  right: 40px;
+  top: 40px;
+  transform: translate(-50%, -50%);
+  border:none;
+  background-color: transparent;
+  padding: 0px;
+  line-height: 0px;
+ }
+ /* .header{
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
  }
 
@@ -132,10 +221,6 @@ padding: 0 15px;
   padding-top: 24px;
   padding-bottom: 24px;
  }
-
-/* =================================================/HEADER=============================================== */
-
-/* =================================================HEADER, FOOTER  LOGO============================== */
 
 .logo-web {
   transition: color var(--main-transition);
@@ -179,9 +264,7 @@ margin-right:77px;
 .studio-white:focus {
   color: var(--text-color-img-portfolio);
 }
-/* =================================================/HEADER, FOOTER  LOGO============================================ */
 
-/*==================================================SITE NAV============================================================ */
 .site-nav{
   display: flex;
   align-items: center;
@@ -231,12 +314,12 @@ margin-right:77px;
 .site-address .link:focus,
 .site-address .link:hover {
   color: var(--accent);
-}
+} */
 /*===================================================/SITE NAV====================================================== */
 
 
 /* ==================================================INDEX HERO===================================================== */
-.hero {
+/* .hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -301,10 +384,10 @@ margin-right:77px;
 
 .hero-button:active {
   background-color: #404bbf;
-}
+} */
 /* ===================/INDEX HERO================= */
 /* ==================INDEX HERO MODAL================= */
-.backdrop {
+/* .backdrop {
   position: fixed;
   visibility: visible;
   opacity: 1;
@@ -543,12 +626,12 @@ color:var(--accent);
 
  .modal-form-button-title{
   width: 106px;
- }
+ } */
 
-/* ========================================/INDEX HERO MODAL========================== */
+/* ==================================/INDEX HERO MODAL========================== */
 
-/* ========================================INDEX QUALITY============================================= */
-.quality{
+/* ======================================INDEX QUALITY============================================= */
+/* .quality{
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -589,11 +672,11 @@ margin-bottom: 8px;
   font-weight: var(--secondary-font-weight);
   font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
-}
-/* =====================================================/INDEX QUALITY============================================ */
+} */
+/* ======================================/INDEX QUALITY============================================ */
 
-/* ====================================================INDEX SERVICE============================================== */
-.service{
+/* ======================================INDEX SERVICE============================================== */
+/* .service{
   padding-top: 0;
   padding-bottom: 120px;
 }
@@ -605,11 +688,11 @@ margin-bottom: 8px;
 .container-service-list{
   display: flex;
   gap: 24px;
-}
-/* ==================================================/INDEX SERVICE============================================== */
+} */
+/* =====================================/INDEX SERVICE============================================== */
 
-/* ====================================================INDEX TEAM============================================== */
-.team-title{
+/* ======================================INDEX TEAM============================================== */
+/* .team-title{
   margin-bottom: 72px;
 }
 
@@ -693,11 +776,11 @@ border-radius: 0px 0px 4px 4px;
 
 .icon-social-media{
 fill: currentColor;
-}
-/* ========================================================/INDEX TEAM====================================== */
+} */
+/* =========================================/INDEX TEAM====================================== */
 
-/* ======================================================INDEX CUSTOMERS==================================== */
-.title-customers{
+/* =====================================INDEX CUSTOMERS==================================== */
+/* .title-customers{
   margin-bottom: 72px;
 
   font-family: var(--primary-font);
@@ -740,19 +823,19 @@ border-color: var(--accent);
 
 .icon-customers{
   fill: currentColor;
-}
+} */
 
-/* =====================================================/INDEX CUSTOMERS==================================== */
+/* ==================================/INDEX CUSTOMERS==================================== */
 
-/* ====================================================PORTFOLIO CONTAINER=================================== */
+/* ================================PORTFOLIO CONTAINER=================================== */
 .portfolio{
   padding-top: 96px;
   padding-bottom: 120px;
 }
 
-/* ===================================================/PORTFOLIO CONTAINER =================================*/
+/* ================================/PORTFOLIO CONTAINER =================================*/
 
-/* ===============================================PORTFOLIO BUTTON FILTER ============================== */
+/* =============================PORTFOLIO BUTTON FILTER ============================== */
 .button {
   display: flex;
   align-items: center;
@@ -790,10 +873,10 @@ border-color: var(--accent);
 .filter-button{
   padding: 12px 24px;
 }
-/* =======================================================/PORTFOLIO BUTTON FILTER================================ */
+/* ===========================/PORTFOLIO BUTTON FILTER================================ */
 
 
-/* ======================================================PORTFOLIO ITEMS=====================================*/
+/* ==========================PORTFOLIO ITEMS=====================================*/
 .portfolio-list{
   display: flex;
   flex-wrap: wrap;
@@ -870,10 +953,10 @@ background-color: var(--accent);
   color:var(--primary-text-color);
 }
 
-/* ===============================================================/PORTFOLIO ITEMS=================================== */
+/* ==================================/PORTFOLIO ITEMS=================================== */
 
-/* ============================================================F00TER================================================= */
-.footer {
+/* ====================================F00TER================================================= */
+/* .footer {
   padding-top: 100px;
   padding-bottom: 100px;
 
@@ -1020,5 +1103,5 @@ color: var(--primary-background-color);
   display: flex;
     justify-content: center;
     align-items: center;;
-}
+} */
 /* =========================================================/FOOTER================================================== */
