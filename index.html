@@ -11,8 +11,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,10 +22,6 @@
   <header class="header">
     <div class="container container-header">
       <a href="./index.html" class="logo-web link">web<span class="logo-studio">studio</span></a>
-
-
-
-
 
       <nav>
         <ul class="site-nav list">
@@ -50,18 +44,74 @@
           <a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a>
         </li>
       </ul>
-      <button type="button" class="mobile-menu-burger">
+      <button type="button" class="mobile-menu-burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="icon-burger" width="32px" height="22px">
           <use href="./images/symbol-defs.svg#icon-burger"></use>
         </svg>
       </button>
     </div>
-    <div class="mobile-menu">
-      <button type="button" data-modal-close class="mobile-menu-cross">
+    <div class="mobile-menu js-menu-container is-open" id="mobile-menu">
+      <button type="button" data-modal-close class="mobile-menu-cross js-close-menu">
         <svg class="mobile-menu-icon-cross" width="8px" height="8px">
           <use href="./images/symbol-defs.svg#icon-cross"></use>
         </svg>
       </button>
+      <ul class="mobile-site-nav">
+        <li class="mobile-site-nav-item list">
+          <a class="link" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-site-nav-item list">
+          <a class="link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-site-nav-item list">
+          <a class="link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-site-address list">
+        <li class="mobile-site-adress-item list">
+          <a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a>
+        </li>
+
+        <li class="mobile-site-adress-item list">
+          <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-media-list">
+
+        <li class="mobile-menu-media-item list">
+          <a class="mobile-menu-media-link link" href="">
+            <svg class="mobile-menu-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="mobile-menu-media-item list">
+          <a class="mobile-menu-media-link link" href="">
+            <svg class="mobile-menu-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="mobile-menu-media-item list">
+          <a class="mobile-menu-media-link link" href="">
+            <svg class="mobile-menu-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="mobile-menu-media-item list">
+          <a class="mobile-menu-media-link link" href="">
+            <svg class="mobile-menu-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
   <!-- ------------------------------------------------/HEADER------------- -->
@@ -504,8 +554,11 @@
     </div>
   </footer> -->
   <!-- -----------------------------/FOOTER------------------- -->
-  <!-- <script src="./js/modal.js"></script>
-  <script src="./js/mobile-menu.js"></script> -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
