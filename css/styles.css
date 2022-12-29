@@ -233,7 +233,7 @@ padding: 0 15px;
   padding-left: 40px;
 padding-top: 80px;
   padding-bottom: 40px;
-  overflow-y: scroll;
+ overflow-y: scroll;
   display: flex;
   flex-direction: column;
 }
