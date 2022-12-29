@@ -211,8 +211,6 @@ padding: 0 15px;
 }
 
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -231,15 +229,13 @@ padding: 0 15px;
 }
 
 .mobile-menu-container{
-  display:flex;
-  flex-direction: column;
-  height: 100%;
   position:relative;
   padding-left: 40px;
 padding-top: 80px;
   padding-bottom: 40px;
   overflow-y: scroll;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-menu-cross {
@@ -282,11 +278,12 @@ padding-top: 80px;
 }
 
 .mobile-menu-bottom{
-margin-top: auto;
+  margin-top: auto;
 }
 
 .mobile-site-address {
-  padding-bottom: 48px;
+  margin-top: 284px;
+  margin-bottom: 48px;
 }
 
 .mobile-site-adress-item .link {
