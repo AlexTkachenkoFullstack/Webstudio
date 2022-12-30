@@ -110,7 +110,7 @@ header .link.current-page{
 
 @media screen and (min-width:768px){
   .container{
-    width:766px;
+    width: 767px;
   }
 }
 
@@ -532,14 +532,12 @@ padding-top: 112px;
 @media screen and (max-width: 767px){
   .hero{
     padding-bottom: 112px;
-    height:432px;
   }
 }
 
 @media screen and (min-width:768px){
   .hero {
       padding-bottom: 108px;
-      height: 436px;
     }
 }
 
@@ -547,7 +545,6 @@ padding-top: 112px;
   .hero{
 padding-top: 188px;
 padding-bottom: 188px;
-height: 600px;
 max-width: 1440px;
 margin-left:auto;
 margin-right: auto;
@@ -566,7 +563,6 @@ font-family: var(--primary-font);
 
 @media screen and (max-width:767px){
   .hero-title{
-    
     margin-bottom: 72px;
     min-width: 318px;
 font-size: 36px;
@@ -578,7 +574,7 @@ font-size: 36px;
 @media screen and (min-width: 768px) {
   .hero-title {
     margin-bottom: 40px;
-    max-width: 494px;
+    min-width: 494px;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: var(--primary-letter-spacing);
@@ -608,7 +604,7 @@ font-size: 36px;
       margin-right: auto;
       cursor: pointer;
       transition: background-color var(--main-transition), box-shadow var(--main-transition);
-}
+    }
 
 .hero-button:hover,
 .hero-button:focus {
