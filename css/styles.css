@@ -71,6 +71,8 @@ ul{
 
 img{
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 header .link.current-page{
@@ -120,20 +122,7 @@ header .link.current-page{
 }
 }
 
-/* .container{
-width: 1158px;
-margin: 0 auto;
-padding: 0 15px;
-} */
-
  /*=================================================/CONTAINER=========================================== */
-
- /* ================================================SECTION============================================= */
-/* .section{
-  padding-top:120px;
-  padding-bottom:120px;
-} */
- /* ================================================/SECTION============================================= */
 
  /* =================================================HEADER================================================= */
 .header {
@@ -528,7 +517,6 @@ color:var(--accent);
 padding-top: 112px;
 }
 
-
 @media screen and (max-width: 767px){
   .hero{
     padding-bottom: 112px;
@@ -624,7 +612,6 @@ font-size: 36px;
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-
   background: rgba(46, 47, 66, 0.4);
 }
 
@@ -726,7 +713,6 @@ font-size: 36px;
   line-height: var(--secondary-line-height);
   letter-spacing: 0.04em;
   color: #8E8F99;
-
   margin-bottom: 4px;
 }
 
@@ -867,8 +853,6 @@ font-size: 36px;
 .modal-form-button-title {
   width: 105px;
 }
-
-
 
 /* ==================================/INDEX HERO MODAL========================== */
 
@@ -1166,50 +1150,103 @@ background-color: var(--primary-background-color);
 /* =========================================/INDEX TEAM====================================== */
 
 /* =====================================INDEX CUSTOMERS==================================== */
-/* .title-customers{
-  margin-bottom: 72px;
+@media screen and (max-width:1199px){
+.customers {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .customers {
+    padding-top: 120px;
+      padding-bottom: 120px;
+  }
+}
+
+.title-customers{
+margin-bottom: 72px;
 
   font-family: var(--primary-font);
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.16;
+    line-height: 1.11;
     text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
+    letter-spacing: var(--primary-letter-spacing);
+    text-transform: capitalize;
 }
 
 .customers-list{
   display: flex;
-  gap: 24px;
-  padding-left: 0;
-  padding-right: 0;
+  flex-wrap: wrap;
+  
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-.customers-link{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: color var(--main-transition), border-color var(--main-transition);
+@media screen and (max-width: 767px){
+  .customers-list{
+    column-gap: 16px;
+    row-gap: 72px;
+  }
+}
 
-  width: 168px;
+@media screen and (min-width:768px) and (max-width: 1199px){
+  .customers-list {
+      column-gap: 24px;
+      row-gap: 72px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+  .customers-list {
+    column-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .customers-item {
+      flex-basis: calc((100% - 16px)/2);
+    }
+}
+
+.customers-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   height: 88px;
 
+  background-color: var(--primary-background-color);
+  color: #8E8F99;
   border: 1px solid #8E8F99;
-  border-radius: 4px;
-  color:#8E8F99;
-}
+    border-radius: 4px;
 
-.customers-link:hover,
- .customers-link:focus{
-color: var(--accent);
-border-color: var(--accent);
-}
+    transition: color var(--main-transition), border-color var(--main-transition);
+  }
+
+  @media screen and (max-width:767px){
+    .customers-link{
+width: 190px;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    .customers-link{
+      width: 168px;
+    }
+  }
+
+  .customers-link:hover,
+  .customers-link:focus{
+    color:#404BBF;
+    border-color:#404BBF;
+  }
 
 .icon-customers{
   fill: currentColor;
-} */
+}
 
 /* ==================================/INDEX CUSTOMERS==================================== */
 
@@ -1342,161 +1379,61 @@ background-color: var(--accent);
 /* ==================================/PORTFOLIO ITEMS=================================== */
 
 /* ====================================F00TER================================================= */
-/* .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
-
+.footer{
   background-color: var(--title-text-color);
 }
 
-.container-footer{
-display: flex;
+@media screen and (min-width:1200px){
+  .container-footer{
+    display:flex;
+  }
 }
 
-.footer-promotion{
-margin-right: 120px;
+@media screen and (max-width:767px){
+  .footer{
+  text-align: center;
+  }
 }
 
-.footer-text{
-  width: 264px;
-  margin-top: 16px;
-  
-  color: var(--footer-text-color);
+@media screen and (max-width:1199px){
+  .footer {
+      padding-top: 96px;
+      padding-bottom: 96px;
+}
 }
 
-.footer-social-media{
-  margin-right: 80px;
+@media screen and (min-width:1200px){
+  .footer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
-.footer-title-link {
-  margin-bottom: 16px;
-
-font-family: var(--primary-font);
-  font-weight: 600;
-  font-size: var(--primary-font-size);
-  line-height: var(--primary-line-height);
-  letter-spacing: var(--primary-letter-spacing);
-  color: var(--primary-background-color);
-}
-
-.footer .list-social-media{
-  padding:0;
-  gap: 16px;
-}
-
-.footer .link-social-media { 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-
-  background-color:rgba(255, 255, 255, 0.1);
-  transition: background-color var(--main-transition);
-}
-
-.footer .link-social-media:hover, 
-.footer .link-social-media:focus{
-background-color: #31D0AA;
-}
-
-.icon-social-media {
-  fill: currentColor;
-}
-
-.subscribe{
-  display: flex;
-  flex-direction: column;
-}
-
-.subscribe-email{
+@media screen and (min-width: 768px) and (max-width:1199px){
+.footer-tablet-first-row {
   display: flex;
   gap: 24px;
+  padding-left: calc(108px - 15px);
+  margin-bottom: 72px;
+}
 }
 
-.subscribe-email-title{
-  font-family: var(--primary-font);
-    font-weight: 600;
-    font-size: var(--primary-font-size);
-    line-height: var(--primary-line-height);
-    letter-spacing: var(--primary-letter-spacing);
-    color: var(--primary-background-color);
+@media screen and (min-width:1200px){
+.footer-desktop-first-part{
+  display:flex;
+  margin-right: 80px;
+}
 }
 
-.subscribe-label{
-  margin-bottom: 16px;
+@media screen and (min-width:1200px){
+  .footer-promotion{
+    margin-right: 120px;
+  }
 }
 
-.subscribe-input{
-  display: flex;
-    align-items: center;
-  width: 264px;
-  height: 40px;
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-
-  font-family: var(--primary-font);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: var(--secondary-line-height);
-    letter-spacing: 0.04em;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: var(--title-text-color);
-
-    transition: background-color var(--main-transition), color var(--main-transition);
+.footer-promotion>.logo-web{
+  display:block;
 }
-
-.subscribe-input:hover, .subscribe-input:not(:placeholder-shown) {
-  outline: none;
-  border-color: var(--accent);
-  color: var(--primary-background-color);
-}
-
-.subscribe-button{
-display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 8px 24px;
- 
-  margin-top: auto;
-  border-radius: 4px;
-  gap: 16px;
-  border: none;
-  cursor: pointer;
-
-  background-color: var(--accent);
-
-color: var(--primary-background-color);
-  font-family: var(--primary-font);
-    font-weight: 700;
-    font-size: var(--primary-font-size);
-    line-height: var(--primary-line-height);
-    letter-spacing: 0.06em;
-
-    transition: background-color var(--main-transition);
-}
-
-.subscribe-button:focus, .subscribe-button:hover{
-  background-color: #404BBF;
-}
-
-.subscribe-button-icon{
-  display: flex;
-    justify-content: center;
-    align-items: center;;
-} */
-
-
-
-
-
-
-/* оформление логотипа с хедера для футера
 
 .studio-white {
   transition: color var(--main-transition);
@@ -1508,5 +1445,200 @@ color: var(--primary-background-color);
 .studio-white:hover,
 .studio-white:focus {
   color: var(--text-color-img-portfolio);
-} */
+}
+
+.footer-text{
+  margin-top: 16px;
+  font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--footer-text-color);
+    text-align: left;
+}
+
+@media screen and (max-width:767px){
+  .footer-text{
+    margin-bottom: 72px;
+    margin-right: auto;
+    margin-left: auto;
+width: 268px;
+  }
+}
+
+@media screen and (min-width:768px){
+  .footer-text{
+    width:264px;
+  }
+}
+
+.footer-title-link{
+  margin-bottom:16px;
+  font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--primary-background-color);
+}
+
+.footer .list-social-media{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  
+}
+
+@media screen and (max-width: 767px){
+  .footer .list-social-media{
+margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .footer .list-social-media {
+padding-left:0;
+}
+}
+
+.footer .link-social-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--team-background-color);
+
+  transition: background-color var(--main-transition);
+}
+
+.footer .link-social-media:hover,
+.footer .link-social-media:focus{
+background-color: #31D0AA;
+}
+
+.footer .icon-social-media{
+  fill: currentColor;
+}
+
+.subscribe{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width:1199px){
+  .subscribe{
+    padding-left: calc(108px - 15px);
+  }
+}
+
+.subscribe-label{
+margin-bottom: 16px;
+}
+
+.subscribe-email-title{
+  font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--primary-background-color);
+}
+
+.subscribe-email {
+  display: flex;
+}
+
+@media screen and (max-width:767px){
+.subscribe-email {
+    flex-direction: column;
+  }
+}
+
+.subscribe-input{
+  display:flex;
+  height: 40px;
+  padding-top:8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      background-color: var(--title-text-color);
+      transition: background-color var(--main-transition), color var(--main-transition);
+}
+
+@media screen and (max-width: 767px){
+  .subscribe-input {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 768px){
+  .subscribe-input {
+      width: 264px;
+      margin-right: 24px;
+    }
+}
+
+.subscribe-input:hover,
+.subscribe-input:not(:placeholder-shown) {
+  outline: none;
+  border-color: var(--accent);
+  color: var(--primary-background-color);
+}
+
+.subscribe-button{
+    transition: background-color var(--main-transition), box-shadow var(--main-transition);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent);
+  gap: 16px;
+  border-radius: 4px;
+  font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    letter-spacing: 0.04em;
+  
+    color: var(--primary-background-color);
+    border: none;
+      cursor: pointer;
+      box-shadow: none;
+}
+
+@media screen and (max-width:767px){
+  .subscribe-button{
+  margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus{
+  background-color:#404BBF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+}
+
+.subscribe-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* =========================================================/FOOTER================================================== */
