@@ -14,13 +14,10 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="329933769521-bd60k8jrqtrd9v50fvdgp3id031k6qp4.apps.googleusercontent.com">
 </head>
 
 <body>
   <!-- --------------------------HEADETR------------------------- -->
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
   <header class="header">
     <div class="container container-header">
       <a href="./index.html" class="logo-web link">web<span class="logo-studio">studio</span></a>
@@ -578,15 +575,6 @@
     crossorigin="anonymous"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/mobile-menu.js"></script>
-  <script>
-        function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-      </script>
 </body>
 
 </html>
